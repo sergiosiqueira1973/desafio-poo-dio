@@ -58,13 +58,20 @@ public class Bootcamp {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
+
         if (o == null || getClass() != o.getClass()) return false;
+
         Bootcamp bootcamp = (Bootcamp) o;
+
         return Objects.equals(nome, bootcamp.nome) && Objects.equals(descricao, bootcamp.descricao) && Objects.equals(dataInicial, bootcamp.dataInicial) && Objects.equals(dataFinal, bootcamp.dataFinal) && Objects.equals(devsInscritos, bootcamp.devsInscritos) && Objects.equals(conteudos, bootcamp.conteudos);
     }
 
     @Override
     public int hashCode() {
+
+        System.out.println(nome);
+
         return Objects.hash(nome, descricao, dataInicial, dataFinal, devsInscritos, conteudos);
+
     }
 }
